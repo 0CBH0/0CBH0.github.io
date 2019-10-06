@@ -1,17 +1,17 @@
-title: John Smith
-description: My Personal Blog
-author: John Smith
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
+title: 0CBH0
+description: RE & Bio.
+author: 0CBH0
+logo: https://avatars2.githubusercontent.com/u/10806069?s=460&v=4
+github: https://github.com/0CBH0
 about: Freelance developer
 
-baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
-url: "https://codeasashu.github.io/hcz-jekyll-blog"
+baseurl: "https://0CBH0.github.io/blog"
+url: "https://0CBH0.github.io/blog"
 
 allowsearch: true
 
 disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+google_analytics: UA-149466812-1
 
 share:
   twitter_username: \#
