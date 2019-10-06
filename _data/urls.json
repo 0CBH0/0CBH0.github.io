@@ -12,23 +12,17 @@
   },
   {
     "text": "Projects",
-    "url": "/projects",
+    "url": "/projects/",
     "icon": "fa-desktop"
   },
   {
     "text": "Resume",
-    "url": "/#",
+    "url": "/resume/",
     "icon": "fa-graduation-cap",
   },
   {
     "text": "Github",
-    "url": "/#",
+    "url": "https://github.com/0CBH0",
     "icon": "fa-github"
-  },
-  {
-    "text": "XML Feed",
-    "url": "/feed.xml",
-    "icon": "fa-feed",
-    "target": _blank
   }
 ]

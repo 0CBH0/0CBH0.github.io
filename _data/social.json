@@ -1,18 +1,10 @@
 [
   {
-    "icon": "fa-facebook",
-    "link": ""
-  },
-  {
     "icon": "fa-twitter",
-    "link": ""
+    "link": "https://twitter.com/0CBH0"
   },
   {
-    "icon": "fa-linkedin",
-    "link": ""
-  },
-  {
-    "icon": "fa-stack-exchange",
-    "link": ""
+    "icon": "fa-github",
+    "link": "https://github.com/0CBH0"
   }
 ]
