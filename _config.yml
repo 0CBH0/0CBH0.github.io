@@ -1,12 +1,12 @@
-title: 0CBH0
-description: RE & Bio.
-author: 0CBH0
+title: Yicong Xu
+description: Neuronal differentiation, omics library preparation and analysis, and software and hardware reverse engineering.
+author: Yicong Xu
 logo: https://avatars2.githubusercontent.com/u/10806069?s=460&v=4
 github: https://github.com/0CBH0
-about: RE & Bio.
+about: Biology & reverse engineering
 
-baseurl: "https://0CBH0.github.io"
-url: "https://0CBH0.github.io"
+baseurl: ""
+url: "https://0cbh0.github.io"
 
 allowsearch: true
 
@@ -25,4 +25,4 @@ paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
 markdown: kramdown
-gems: [jekyll-paginate, jekyll-gist]
+plugins: [jekyll-paginate, jekyll-gist]

@@ -1,22 +1,31 @@
-## HCZ Material theme
+# Yicong Xu's personal website
 
-This is a simple personal material theme, best suited for personal authors, programmars, bloggers. 
+Jekyll source for [0cbh0.github.io](https://0cbh0.github.io), covering neuronal differentiation, omics methods, and software and hardware reverse engineering.
 
-### Demo
-* [https://codeasashu.github.io/hcz-jekyll-blog](https://codeasashu.github.io/hcz-jekyll-blog/)
+## Pages and content
 
-#### Feature
+- `index.html` and `_includes/profile_intro.html`: the homepage introduction; the introduction is also reused by `about.md`.
+- `_data/projects.json`: recent project descriptions, GitHub links, topics, and last-update dates. The current selection covers development activity from November 10, 2024 to November 10, 2026; update this selection as projects change.
+- `resume.md`: the English CV as a web page.
+- `static/files/Yicong_Xu_CV.pdf`: the downloadable English CV; replace it when updating the resume.
 
-* Sitemap and XML Feed
-* Site Search 
-* Projects and tags
-* Paginations in homepage
-* Posts under category
-* Related Posts
-* Highlight pre
-* Next & Previous Post
-* Disqus comment
+## Local preview
 
-#### Screenshot
+Install Ruby and Bundler, then run:
 
-![Screenshot Home Page](https://raw.githubusercontent.com/ashutosh2k12/jekyllthemes/master/thumbnails/hcz-material.png  "Screenshot Home Page")
+```sh
+bundle install
+bundle exec jekyll serve --host 127.0.0.1 --port 4000
+```
+
+Open `http://127.0.0.1:4000/`. To build without starting a server:
+
+```sh
+bundle exec jekyll build
+```
+
+The Gemfile uses Jekyll 3.10.0 and GitHub Pages-compatible plugin versions. GitHub Pages builds from the repository's configured publishing branch.
+
+## Theme
+
+Based on the [HCZ Material theme](https://github.com/codeasashu/hcz-jekyll-blog), with its original MIT license retained in `LICENSE`.

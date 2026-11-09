@@ -1,25 +1,13 @@
-{% if site.enableTags ==  true %} 
-	<div id="tag-filter" class="col-md-12 col-xs-12 tag-group">
-		<span class="label tag-filter tag-cloud all">Reset</span>
-        {% assign tagarray = site.tagarray %}
-        {% for project in site.data.projects %}
-            {% for tag in project.tags %}
-                {% assign tagarray = tagarray | push: tag %}
-            {% endfor %}
-        {% endfor %}
-
-        {% assign tags = tagarray[1] %}
-        {% for item in tagarray %}
-            {% assign tagDown = item | downcase %}
-            {% assign tagComp = tags | downcase %}
-            {% unless tagComp contains tagDown %}
-                {% capture tags %}{{ tags }}|{{ item }}{% endcapture %}
-            {% endunless %}
-        {% endfor %}
-
-        {% assign taglist = tags | split: '|' | sort %}
-        {% for tag in taglist %}
-            <span class="label tag-filter tag-cloud" data-tag="{{ tag | downcase }}">{{ tag }}</span>
-        {% endfor %}
-	</div>
+{% if site.enableTags %}
+{% assign all_project_tags = '' | split: ',' %}
+{% for project in site.data.projects %}
+  {% assign all_project_tags = all_project_tags | concat: project.tags %}
+{% endfor %}
+{% assign all_project_tags = all_project_tags | uniq | sort %}
+<div id="tag-filter" class="tag-group" role="group" aria-label="Filter projects by topic">
+  <button type="button" class="tag-filter all is-active" aria-pressed="true">All projects</button>
+  {% for tag in all_project_tags %}
+  <button type="button" class="tag-filter" data-tag="{{ tag | downcase | escape }}" aria-pressed="false">{{ tag | escape }}</button>
+  {% endfor %}
+</div>
 {% endif %}

@@ -1,58 +1,46 @@
-(function($){
-	$(document).ready(function(){
-		var selectedTags = [];
-		$(document).on('click','.tag-filter',function(){
-			console.log("Tags", selectedTags);
-			if( $(this).hasClass('all')){
-				selectedTags = [];
-				$('span.tag-filter').removeClass("label-primary");
-				$(this).addClass("label-primary");
-				$('.project-item').showAll();
-			}else{
-				if( $(this).hasClass("label-primary") ){
-					selectedTags.removeTag( $(this).data('tag') );
-					$(this).removeClass("label-primary");
-				}
-				else{
-					selectedTags.addTag( $(this).data('tag') );
-					$(this).addClass("label-primary");
-				}
-				$('.project-item').filterTags( selectedTags );
-			}
-		});
-	});
+(function () {
+  'use strict';
 
-	Array.prototype.addTag = function(tag) {
-		if(this.indexOf(tag) === -1) this.push(tag);
-	}
+  document.addEventListener('DOMContentLoaded', function () {
+    var filters = document.getElementById('tag-filter');
+    if (!filters) return;
 
-	Array.prototype.removeTag = function(tag) {
-		var tagIndex = this.indexOf(tag);
-		this.splice(tagIndex,1);
-	}
+    var buttons = Array.prototype.slice.call(filters.querySelectorAll('button'));
+    var projects = Array.prototype.slice.call(document.querySelectorAll('.project-item'));
+    var count = document.getElementById('project-count');
+    var selected = [];
 
-	$.fn.extend({
-	  filterTags: function(tagNames) {
-	  	if(tagNames.length == 0) return this.showAll();
+    function render() {
+      var visible = 0;
+      projects.forEach(function (project) {
+        var tags = JSON.parse(project.getAttribute('data-tags'));
+        var matches = selected.length === 0 || selected.some(function (tag) {
+          return tags.indexOf(tag) !== -1;
+        });
+        project.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      buttons.forEach(function (button) {
+        var tag = button.getAttribute('data-tag');
+        var active = tag ? selected.indexOf(tag) !== -1 : selected.length === 0;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      count.textContent = visible + (visible === 1 ? ' project' : ' projects');
+    }
 
-	    return this.each(function() {
-	    	var itemTagArray = JSON.parse( $(this).attr('data-tags') );
-	    	var unfound = $( tagNames ).not( itemTagArray ).get();
-	    	console.log("unfound", unfound, itemTagArray.length);
-	    	if( unfound.length == tagNames.length ){
-		//	if($.inArray(tagName, itemTagArray) === -1){
-				$(this).addClass('not-show');
-			}else{
-				$(this).removeClass('not-show');
-			}
-	    });
-	  },
-	  showAll: function(){
-	  	return this.each(function() {
-			if($(this).hasClass('not-show')){
-				$(this).removeClass('not-show');
-			}
-	    });
-	  }
-	});
-})(jQuery)
+    filters.addEventListener('click', function (event) {
+      var button = event.target.closest('button');
+      if (!button || !filters.contains(button)) return;
+      var tag = button.getAttribute('data-tag');
+      if (!tag) {
+        selected = [];
+      } else {
+        var index = selected.indexOf(tag);
+        if (index === -1) selected.push(tag);
+        else selected.splice(index, 1);
+      }
+      render();
+    });
+  });
+}());

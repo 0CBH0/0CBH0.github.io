@@ -1,8 +1,14 @@
 ---
 layout: default
-title: Welcome to my blog
+title: Home
+description: Yicong Xu studies neuronal differentiation, develops omics methods, and explores software and hardware through reverse engineering.
 ---
 <div class="well">
+    {% include profile_intro.html %}
+</div>
+{% if paginator.posts.size > 0 %}
+<div class="well">
+    <h2>Research notes</h2>
     <div class="list-group">
       {% for post in paginator.posts %}
       <div class="list-group-item">
@@ -60,3 +66,4 @@ title: Welcome to my blog
     </ul>
     {% endif %}
 </div><!-- end #home -->
+{% endif %}

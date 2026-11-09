@@ -1,4 +1,58 @@
 [
-
-
+  {
+    "name": "nso2ida",
+    "url": "https://github.com/0CBH0/nso2ida",
+    "description": "An IDAPython loader for Nintendo Switch and Switch 2 NSO, NRO, and KIP executables, with support for compressed segments, symbols, and relocations. Extends ReSwitched's nxo64.py loader.",
+    "tags": ["Reverse engineering", "Python", "Nintendo Switch"],
+    "updated_at": "2026-11-06"
+  },
+  {
+    "name": "nsnsotool",
+    "url": "https://github.com/0CBH0/nsnsotool",
+    "description": "A C command-line utility for compressing and decompressing Nintendo Switch NSO files with LZ4. The 2026 update adds Nintendo Switch 2 support.",
+    "tags": ["Reverse engineering", "C", "Nintendo Switch"],
+    "updated_at": "2026-11-03"
+  },
+  {
+    "name": "ouendan_toolkit",
+    "url": "https://github.com/0CBH0/ouendan_toolkit",
+    "description": "A Windows C++ toolkit for importing and exporting Nintendo DS Ouendan graphics and working with LZ10/LZSS-compressed data, including tile and palette resources.",
+    "tags": ["Reverse engineering", "C++", "Nintendo DS"],
+    "updated_at": "2026-06-13"
+  },
+  {
+    "name": "OEFL_pipeline",
+    "url": "https://github.com/0CBH0/OEFL_pipeline",
+    "description": "An analysis workflow for single-cell long-read sequencing of olfactory sensory neurons. Combines Shell and Python preprocessing with R scripts for isoform profiling and figure generation.",
+    "tags": ["Bioinformatics", "Single-cell", "Long-read sequencing"],
+    "updated_at": "2026-06-07"
+  },
+  {
+    "name": "ATACFragQC",
+    "url": "https://github.com/0CBH0/ATACFragQC",
+    "description": "A Python quality-control toolkit for bulk and single-cell ATAC-seq fragment data, reporting chromosomal distributions, fragment-length profiles, and transcription start site enrichment.",
+    "tags": ["Bioinformatics", "ATAC-seq", "Python"],
+    "updated_at": "2026-03-17"
+  },
+  {
+    "name": "img2gcode",
+    "url": "https://github.com/0CBH0/img2gcode",
+    "description": "A Python command-line utility that converts raster images into G-code for laser-machine workflows.",
+    "tags": ["Hardware tools", "Python", "G-code"],
+    "updated_at": "2026-03-07"
+  },
+  {
+    "name": "amplicon_handle",
+    "url": "https://github.com/0CBH0/amplicon_handle",
+    "description": "An R, Python, and Shell workflow for processing amplicon-sequencing reads and identifying mutated codons, from alignment and sequence extraction to filtering and codon-level counting.",
+    "tags": ["Bioinformatics", "Amplicon sequencing", "R / Python / Shell"],
+    "updated_at": "2025-12-11"
+  },
+  {
+    "name": "FLITseq_pipeline",
+    "url": "https://github.com/0CBH0/FLITseq_pipeline",
+    "description": "An R, Python, and Shell workflow for scWT/FLIT-seq analysis, including preprocessing of bulk and droplet datasets and manuscript figure generation. Updated for Seurat v5.",
+    "tags": ["Bioinformatics", "Single-cell", "R / Python / Shell"],
+    "updated_at": "2025-04-17"
+  }
 ]

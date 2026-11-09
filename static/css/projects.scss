@@ -1,103 +1,99 @@
 ---
 ---
-$heading_size: 20px;
-$text_size: 13px;
 
-@mixin curhand {
-  cursor: pointer;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
-@mixin margins ($margin) {
-  margin: $margin;
-}
-@mixin pad ($pad) {
-  padding: $pad;
-}
-@mixin bg ($size, $repeat: no-repeat, $posTop: center, $posLeft: center) {
-    background-size: $size;
-    background-repeat: $repeat;
-    background-position: $posTop $posLeft;
-}
-@mixin borderbtm ($color, $size: 1px) {
-  border-bottom: $size $color solid;
-}
-
-/**
- * //////////////////////////////////
- * Project Block
- * //////////////////////////////////
- */
-.project-item.not-show{ display: none; }
 
 .project-outer {
-
-    vertical-align: top;
-
-    .project-headlines {
-
-        @include margins(5px 0);
-        @include borderbtm( #EEE );
-        font-size: $heading_size;
-
-    }
-
-    .project-inner > a { display: block; }
-
-    .project-img {
-        height: 200px;
-        display: block;
-        @include bg( cover );
-    }
-
-    span.tags {
-
-        @include borderbtm( #888 );
-        @include margins(0 5px);
-        font-size: ($heading_size / 2);
-
-        &:first-child, &:last-child { margin-left: 0; }
-    }
-
-    .project-footer {
-
-        clear: both;
-        display: inline-block;
-        width: 100%;
-
-        .project-link {
-            display: inline-block;
-            position: relative;
-            float: left;
-        }
-
-        .project-timeline {
-
-            display: inline-block;
-            position: relative;
-            float: right;
-            font-size: $text_size;
-            font-style: italic;
-            vertical-align: middle;
-            @include margins(10px 0);
-            @include pad(5px 0);
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
 }
 
-
-/**
- * //////////////////////////////////
- * Project Tags Block
- * //////////////////////////////////
- */
-
-.tag-group{
-    @include margins(0 0 25px 0);
-
-    .tag-cloud {
-        @include margins(0 2px);
-        @include curhand;
-
-        .active { background: #ccc; }
-    }
+.project-headlines {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
+.project-description {
+  line-height: 1.65;
+}
+
+.project-img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.tag-holder {
+  margin: 8px 0 16px;
+}
+
+.project-tag {
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: #edf5f3;
+  color: #285b52;
+  font-size: 12px;
+}
+
+.project-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-timeline, .project-count {
+  color: #595959;
+  font-size: 13px;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 16px;
+}
+
+.tag-filter {
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #c1d8d1;
+  border-radius: 3px;
+  background: #fff;
+  color: #285b52;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tag-filter.is-active {
+  border-color: #007d72;
+  background: #007d72;
+  color: #fff;
+}
+
+.tag-filter:focus-visible, .project-outer a:focus-visible {
+  outline: 3px solid #007d72;
+  outline-offset: 3px;
+}
+
+.project-item[hidden] {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

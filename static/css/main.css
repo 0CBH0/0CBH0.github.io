@@ -220,3 +220,56 @@ footer {
     position: absolute;
     right: 12px;
 }
+
+.profile-intro, .full .cv-content {
+    line-height: 1.75;
+}
+.profile-intro h1 {
+    margin-top: 0;
+    font-size: 38px;
+    font-weight: 400;
+}
+.profile-subtitle {
+    margin-bottom: 24px;
+    color: #285b52;
+    font-size: 18px;
+}
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-top: 20px;
+}
+.profile-contact, .full a {
+    overflow-wrap: break-word;
+}
+.cv-content h2 {
+    margin-top: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8e5e0;
+    font-size: 25px;
+}
+.cv-content h3 {
+    margin: 22px 0 6px;
+    font-size: 20px;
+}
+.cv-content li {
+    margin-bottom: 14px;
+}
+.cv-content address {
+    font-style: normal;
+}
+.cv-content sup {
+    white-space: nowrap;
+}
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #007d72;
+    outline-offset: 3px;
+}
+@media (max-width: 767px) {
+    .main.outer { padding-top: 24px; }
+    .header-panel.shadow-z-2 { padding-top: 28px; }
+    .profile-intro h1 { font-size: 32px; }
+    .cv-content ol { margin-left: 0; padding-left: 22px; }
+}
