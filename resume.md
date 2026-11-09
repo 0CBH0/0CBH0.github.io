@@ -39,7 +39,7 @@ Hangzhou, Zhejiang, China
 ## Research interests
 
 - Profiles and mechanisms of neuronal differentiation
-- Methods for integrative analysis of multi-omics data
+- Multi-omics library preparation and integrative analysis
 
 ## Publications
 
