@@ -42,6 +42,13 @@
     "updated_at": "2026-03-07"
   },
   {
+    "name": "ATAC_QC_Pipline",
+    "url": "https://github.com/0CBH0/ATAC_QC_Pipline",
+    "description": "A shell-based ATAC-seq quality-control pipeline integrating read filtering, alignment, duplicate handling, BAM preparation, and fragment-level QC with ATACFragQC.",
+    "tags": ["Bioinformatics", "ATAC-seq", "Shell"],
+    "updated_at": "2026-03-07"
+  },
+  {
     "name": "amplicon_handle",
     "url": "https://github.com/0CBH0/amplicon_handle",
     "description": "An R, Python, and Shell workflow for processing amplicon-sequencing reads and identifying mutated codons, from alignment and sequence extraction to filtering and codon-level counting.",
@@ -49,10 +56,45 @@
     "updated_at": "2025-12-11"
   },
   {
+    "name": "translate_sse_into_python",
+    "url": "https://github.com/0CBH0/translate_sse_into_python",
+    "description": "An experimental Python reference that reimplements selected x86 SSE intrinsics for binary-analysis and reverse-engineering tasks.",
+    "tags": ["Reverse engineering", "Python", "Experimental"],
+    "updated_at": "2025-10-28"
+  },
+  {
     "name": "FLITseq_pipeline",
     "url": "https://github.com/0CBH0/FLITseq_pipeline",
     "description": "An R, Python, and Shell workflow for scWT/FLIT-seq analysis, including preprocessing of bulk and droplet datasets and manuscript figure generation. Updated for Seurat v5.",
     "tags": ["Bioinformatics", "Single-cell", "R / Python / Shell"],
     "updated_at": "2025-04-17"
+  },
+  {
+    "name": "imageConv",
+    "url": "https://github.com/0CBH0/imageConv",
+    "description": "A C++ library and demonstration tool for processing general, indexed, and tiled image formats, with libimagequant support for palette quantization.",
+    "tags": ["Image processing", "C++", "Graphics tools"],
+    "updated_at": "2024-11-07"
+  },
+  {
+    "name": "mrnaScan",
+    "url": "https://github.com/0CBH0/mrnaScan",
+    "description": "A toolkit for analyzing transcript isoforms in full-length mRNA-seq data, including read-level exon combinations and 3'-UTR usage.",
+    "tags": ["Bioinformatics", "Long-read sequencing", "Python"],
+    "updated_at": "2024-08-07"
+  },
+  {
+    "name": "CellMerge2",
+    "url": "https://github.com/0CBH0/CellMerge2",
+    "description": "An image acquisition, stitching, and analysis tool for immunofluorescence analysis, built with C++, Qt, and OpenCV.",
+    "tags": ["Bioimaging", "C++", "Qt"],
+    "updated_at": "2023-09-02"
+  },
+  {
+    "name": "openmm_class",
+    "url": "https://github.com/0CBH0/openmm_class",
+    "description": "Coursework and examples for OpenMMLab MMClassification and MMDetection, covering ResNet-based flower classification and Mask R-CNN balloon instance segmentation.",
+    "tags": ["Coursework", "Computer vision", "Python"],
+    "updated_at": "2023-02-08"
   }
 ]

@@ -4,8 +4,8 @@ Jekyll source for [0cbh0.github.io](https://0cbh0.github.io), covering neuronal 
 
 ## Pages and content
 
-- `index.html` and `_includes/profile_intro.html`: the homepage introduction; the introduction is also reused by `about.md`.
-- `_data/projects.json`: recent project descriptions, GitHub links, topics, and last-update dates. The current selection covers development activity from November 10, 2024 to November 10, 2026; update this selection as projects change.
+- `index.html` and `_includes/profile_intro.html`: the homepage introduction. `about.md` describes the research and engineering interests.
+- `_data/projects.json`: recent project descriptions, GitHub links, topics, and last-update dates. The current selection covers activity from November 10, 2022 to November 10, 2026; update this selection as projects change.
 - `resume.md`: the English CV as a web page.
 - `static/files/Yicong_Xu_CV.pdf`: the downloadable English CV; replace it when updating the resume.
 

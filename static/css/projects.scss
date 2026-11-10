@@ -3,7 +3,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 24px 0 16px;
+  margin: 0 0 16px;
 }
 
 .tag-filter {
@@ -90,10 +90,4 @@
 
 .project-item[hidden] {
   display: none;
-}
-
-@media (max-width: 767px) {
-  .projects-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
